@@ -1,0 +1,865 @@
+/* ============================================================
+   Trash Tracking – Global Stylesheet  v2.0
+   Tema: Modern Frosted Green — Pastel hijau, putih, abu-abu muda
+
+   Palette:
+   Primary       : #A2E1A6   (pastel hijau utama)
+   Primary Dark  : #4CAF72   (hijau tombol hover)
+   Primary Deep  : #2E7D50   (aksen gelap)
+   Primary Light : #D6F5DC   (surface sangat terang)
+   BG            : #F0F6F2   (background abu-abu kehijauan)
+   Surface       : #FFFFFF
+   Surface Soft  : #F8FBF9
+   Border        : #D0E8D8
+   Text Dark     : #172B1F
+   Text Mid      : #3D5A47
+   Text Muted    : #7A9E87
+   Danger        : #E53935
+   Warning       : #F59E0B
+   Info          : #2196F3
+   Success       : #22C55E
+   ============================================================ */
+
+/* ── Root & Global Reset ─────────────────────────────────── */
+.root {
+  -fx-font-family:
+    "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -fx-font-size: 14px;
+  -fx-background-color: #f0f6f2;
+}
+
+/* ======================================================
+   AUTH — Login & Register
+   ====================================================== */
+
+.auth-root {
+  -fx-background-color: #f0f6f2;
+  -fx-min-height: 620px;
+}
+
+/* Panel kiri — branding gradient */
+.auth-left-panel {
+  -fx-background-color: linear-gradient(
+    to bottom right,
+    #2e7d50,
+    #5dc47e,
+    #a2e1a6
+  );
+  -fx-background-radius: 0 32 32 0;
+  -fx-min-height: 620px;
+  -fx-padding: 60 48 60 48;
+  -fx-effect: dropshadow(gaussian, #00000028, 18, 0, 5, 0);
+}
+
+.brand-icon {
+  -fx-font-size: 72px;
+  -fx-effect: dropshadow(gaussian, #00000030, 6, 0, 0, 3);
+}
+
+.brand-name {
+  -fx-font-size: 40px;
+  -fx-font-weight: 800;
+  -fx-fill: #ffffff;
+  -fx-effect: dropshadow(gaussian, #00000040, 4, 0, 0, 2);
+}
+
+.brand-tagline {
+  -fx-font-size: 14.5px;
+  -fx-fill: #d4f0dc;
+  -fx-text-alignment: center;
+  -fx-line-spacing: 6px;
+}
+
+/* Panel kanan — form */
+.auth-right-panel {
+  -fx-background-color: #ffffff;
+}
+
+.auth-title {
+  -fx-font-size: 30px;
+  -fx-font-weight: 800;
+  -fx-fill: #172b1f;
+}
+
+.auth-subtitle {
+  -fx-font-size: 13px;
+  -fx-fill: #7a9e87;
+}
+
+.auth-hint {
+  -fx-text-fill: #9ab8a6;
+  -fx-font-size: 13px;
+}
+
+.auth-link {
+  -fx-text-fill: #3ab869;
+  -fx-font-size: 13px;
+  -fx-border-color: transparent;
+  -fx-font-weight: 700;
+  -fx-cursor: hand;
+}
+
+.auth-link:hover {
+  -fx-text-fill: #1e7a42;
+}
+
+/* ── Form Fields ─────────────────────────────────────── */
+.field-label {
+  -fx-font-size: 12px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #3d5a47;
+  -fx-padding: 0 0 2 0;
+}
+
+.input-field {
+  -fx-background-color: #f5faf6;
+  -fx-border-color: #c4dece;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-padding: 11 14 11 14;
+  -fx-font-size: 14px;
+  -fx-text-fill: #172b1f;
+  -fx-prompt-text-fill: #adc5b7;
+  -fx-pref-height: 44px;
+}
+
+.input-field:focused {
+  -fx-border-color: #6ed48a;
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(gaussian, #a2e1a660, 10, 0, 0, 0);
+}
+
+.input-area {
+  -fx-background-color: #f5faf6;
+  -fx-border-color: #c4dece;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10 14 10 14;
+  -fx-font-size: 13px;
+  -fx-text-fill: #172b1f;
+  -fx-prompt-text-fill: #adc5b7;
+}
+
+.input-area:focused {
+  -fx-border-color: #6ed48a;
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(gaussian, #a2e1a640, 8, 0, 0, 0);
+}
+
+.input-combo {
+  -fx-background-color: #f5faf6;
+  -fx-border-color: #c4dece;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-padding: 6 10 6 10;
+  -fx-font-size: 13px;
+  -fx-cursor: hand;
+}
+
+.input-combo:focused {
+  -fx-border-color: #6ed48a;
+}
+
+.input-combo .combo-box-popup .list-cell {
+  -fx-font-size: 13px;
+  -fx-padding: 8 12 8 12;
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+.btn-primary {
+  -fx-background-color: linear-gradient(to bottom, #6ed48a, #4caf72);
+  -fx-text-fill: #ffffff;
+  -fx-font-weight: 700;
+  -fx-font-size: 14px;
+  -fx-border-radius: 12px;
+  -fx-background-radius: 12px;
+  -fx-padding: 12 26 12 26;
+  -fx-cursor: hand;
+  -fx-effect: dropshadow(gaussian, #4caf7250, 8, 0, 0, 3);
+}
+
+.btn-primary:hover {
+  -fx-background-color: linear-gradient(to bottom, #5dc47e, #389e5a);
+  -fx-effect: dropshadow(gaussian, #4caf7270, 12, 0, 0, 4);
+  -fx-scale-y: 1.02;
+}
+
+.btn-primary:pressed {
+  -fx-background-color: #2e7d50;
+  -fx-effect: dropshadow(gaussian, #2e7d5040, 4, 0, 0, 1);
+  -fx-scale-y: 0.98;
+}
+
+.btn-primary:disabled {
+  -fx-background-color: #c8ddd0;
+  -fx-text-fill: #9ab8a6;
+  -fx-effect: none;
+  -fx-opacity: 0.8;
+}
+
+.btn-secondary {
+  -fx-background-color: #ffffff;
+  -fx-text-fill: #3d5a47;
+  -fx-font-weight: 600;
+  -fx-font-size: 13px;
+  -fx-border-color: #b8d8c2;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10 18 10 18;
+  -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+  -fx-background-color: #eaf8ee;
+  -fx-border-color: #6ed48a;
+  -fx-text-fill: #172b1f;
+}
+
+.btn-secondary:pressed {
+  -fx-background-color: #d4f0dc;
+}
+
+/* ── Feedback ────────────────────────────────────────── */
+.error-label {
+  -fx-text-fill: #c0392b;
+  -fx-font-size: 12.5px;
+  -fx-background-color: #fef2f2;
+  -fx-border-color: #fecaca;
+  -fx-border-radius: 9px;
+  -fx-background-radius: 9px;
+  -fx-padding: 9 14 9 14;
+  -fx-wrap-text: true;
+}
+
+.success-label {
+  -fx-text-fill: #15803d;
+  -fx-font-size: 12.5px;
+  -fx-background-color: #f0fdf4;
+  -fx-border-color: #86efac;
+  -fx-border-radius: 9px;
+  -fx-background-radius: 9px;
+  -fx-padding: 9 14 9 14;
+  -fx-wrap-text: true;
+}
+
+/* ======================================================
+   MAIN LAYOUT
+   ====================================================== */
+
+.main-root {
+  -fx-background-color: #f0f6f2;
+}
+
+/* ── Sidebar ─────────────────────────────────────────── */
+.sidebar {
+  -fx-background-color: #ffffff;
+  -fx-border-color: transparent #daeae1 transparent transparent;
+  -fx-border-width: 0 1 0 0;
+  -fx-effect: dropshadow(gaussian, #0000001a, 14, 0, 4, 0);
+}
+
+.sidebar-logo-box {
+  -fx-background-color: linear-gradient(
+    to bottom right,
+    #2e7d50,
+    #4caf72,
+    #a2e1a6
+  );
+  -fx-padding: 26 16 20 16;
+}
+
+.sidebar-logo-icon {
+  -fx-font-size: 36px;
+  -fx-effect: dropshadow(gaussian, #00000030, 4, 0, 0, 2);
+}
+
+.sidebar-logo-text {
+  -fx-font-size: 18px;
+  -fx-font-weight: 800;
+  -fx-fill: #ffffff;
+  -fx-letter-spacing: 0.5px;
+  -fx-effect: dropshadow(gaussian, #00000040, 3, 0, 0, 1);
+}
+
+.sidebar-logo-subtitle {
+  -fx-font-size: 10px;
+  -fx-fill: #c8f0d8;
+  -fx-font-weight: 500;
+}
+
+.sidebar-welcome {
+  -fx-font-size: 12px;
+  -fx-text-fill: #7a9e87;
+  -fx-font-style: italic;
+}
+
+.sidebar-separator {
+  -fx-background-color: #e8f2ec;
+}
+
+.nav-btn {
+  -fx-background-color: transparent;
+  -fx-text-fill: #3d5a47;
+  -fx-font-size: 13px;
+  -fx-font-weight: 500;
+  -fx-alignment: CENTER-LEFT;
+  -fx-padding: 12 14 12 16;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-cursor: hand;
+}
+
+.nav-btn:hover {
+  -fx-background-color: #e8f5ec;
+  -fx-text-fill: #172b1f;
+}
+
+.nav-btn-active {
+  -fx-background-color: linear-gradient(to right, #d0f0da, #eafaf0);
+  -fx-text-fill: #1a5a30;
+  -fx-font-weight: 700;
+  -fx-border-color: transparent transparent transparent #4caf72;
+  -fx-border-width: 0 0 0 3;
+}
+
+.nav-btn-admin {
+  -fx-text-fill: #5a4a9e;
+}
+.nav-btn-admin:hover {
+  -fx-background-color: #ede8f8;
+}
+
+.nav-btn-logout {
+  -fx-text-fill: #e53935;
+  -fx-font-weight: 600;
+}
+.nav-btn-logout:hover {
+  -fx-background-color: #fff0ee;
+  -fx-text-fill: #c0392b;
+}
+
+.content-area {
+  -fx-background-color: #f0f6f2;
+}
+
+/* ======================================================
+   PAGE COMMONS
+   ====================================================== */
+
+.page-scroll {
+  -fx-background-color: transparent;
+  -fx-background: transparent;
+  -fx-border-color: transparent;
+  -fx-padding: 0;
+}
+
+.page-scroll > .viewport {
+  -fx-background-color: transparent;
+}
+
+.page-content {
+  -fx-background-color: transparent;
+}
+
+.page-title {
+  -fx-font-size: 25px;
+  -fx-font-weight: 800;
+  -fx-fill: #172b1f;
+}
+
+.page-subtitle {
+  -fx-font-size: 13px;
+  -fx-fill: #7a9e87;
+}
+
+.section-title {
+  -fx-font-size: 14px;
+  -fx-font-weight: 700;
+  -fx-fill: #2a4a34;
+}
+
+.inner-scroll {
+  -fx-background-color: transparent;
+  -fx-background: #ffffff;
+  -fx-border-color: #d8eade;
+  -fx-border-radius: 12px;
+  -fx-background-radius: 12px;
+}
+
+.inner-scroll > .viewport {
+  -fx-background-color: transparent;
+}
+
+/* ======================================================
+   HOME PAGE — Stat Cards
+   ====================================================== */
+
+.stat-card {
+  -fx-background-radius: 18px;
+  -fx-border-radius: 18px;
+  -fx-effect: dropshadow(gaussian, #0000001a, 10, 0, 0, 4);
+  -fx-cursor: default;
+}
+
+.stat-card:hover {
+  -fx-effect: dropshadow(gaussian, #0000002a, 14, 0, 0, 6);
+  -fx-scale-y: 1.02;
+  -fx-scale-x: 1.02;
+}
+
+.card-green {
+  -fx-background-color: linear-gradient(to bottom right, #d6f5de, #c0eecb);
+}
+.card-yellow {
+  -fx-background-color: linear-gradient(to bottom right, #fef9c3, #fde68a);
+}
+.card-blue {
+  -fx-background-color: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+}
+.card-purple {
+  -fx-background-color: linear-gradient(to bottom right, #ede9fe, #ddd6fe);
+}
+.card-orange {
+  -fx-background-color: linear-gradient(to bottom right, #ffedd5, #fed7aa);
+}
+.card-teal {
+  -fx-background-color: linear-gradient(to bottom right, #ccfbf1, #99f6e4);
+}
+
+.stat-icon {
+  -fx-font-size: 32px;
+}
+
+.stat-value {
+  -fx-font-size: 28px;
+  -fx-font-weight: 800;
+  -fx-text-fill: #172b1f;
+}
+
+.stat-label {
+  -fx-font-size: 11px;
+  -fx-text-fill: #5a7a65;
+  -fx-font-weight: 600;
+  -fx-text-alignment: center;
+  -fx-wrap-text: true;
+}
+
+.aktivitas-list {
+  -fx-background-color: transparent;
+  -fx-padding: 6 4 6 4;
+}
+
+.aktivitas-item {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 12px;
+  -fx-border-radius: 12px;
+  -fx-border-color: #e0eee6;
+  -fx-padding: 11 15 11 15;
+  -fx-effect: dropshadow(gaussian, #0000000e, 4, 0, 0, 1);
+}
+
+.aktivitas-item:hover {
+  -fx-background-color: #f4faf6;
+  -fx-border-color: #a2e1a6;
+}
+
+.aktivitas-bullet {
+  -fx-text-fill: #4caf72;
+  -fx-font-size: 18px;
+  -fx-font-weight: 900;
+}
+
+.aktivitas-text {
+  -fx-text-fill: #2e4a38;
+  -fx-font-size: 13px;
+}
+
+/* ======================================================
+   KOMUNITAS PAGE
+   ====================================================== */
+
+.post-container {
+  -fx-background-color: transparent;
+  -fx-padding: 4 2 4 2;
+}
+
+.post-card {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 14px;
+  -fx-border-radius: 14px;
+  -fx-border-color: #deeae4;
+  -fx-effect: dropshadow(gaussian, #0000000f, 6, 0, 0, 2);
+}
+
+.post-card:hover {
+  -fx-border-color: #a2e1a6;
+  -fx-effect: dropshadow(gaussian, #a2e1a630, 10, 0, 0, 3);
+}
+
+.post-nama {
+  -fx-font-weight: 700;
+  -fx-text-fill: #172b1f;
+  -fx-font-size: 13px;
+}
+
+.post-tanggal {
+  -fx-font-size: 11px;
+  -fx-text-fill: #9ab8a6;
+}
+
+.post-isi {
+  -fx-font-size: 13px;
+  -fx-text-fill: #3d5a47;
+  -fx-wrap-text: true;
+  -fx-line-spacing: 2;
+}
+
+.post-badge {
+  -fx-font-size: 11px;
+  -fx-font-weight: 700;
+  -fx-padding: 3 10 3 10;
+  -fx-background-radius: 20px;
+  -fx-border-radius: 20px;
+}
+
+.badge-pembahasan {
+  -fx-background-color: #dbeafe;
+  -fx-text-fill: #1e40af;
+}
+.badge-manfaat {
+  -fx-background-color: #d1fae5;
+  -fx-text-fill: #065f46;
+}
+.badge-tempat {
+  -fx-background-color: #fef3c7;
+  -fx-text-fill: #92400e;
+}
+.badge-curhatan {
+  -fx-background-color: #ffe4e6;
+  -fx-text-fill: #9f1239;
+}
+
+.post-form-box {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 16px;
+  -fx-border-radius: 16px;
+  -fx-border-color: #d0e8d8;
+  -fx-effect: dropshadow(gaussian, #0000000f, 8, 0, 0, 2);
+}
+
+.empty-label {
+  -fx-text-fill: #9ab8a6;
+  -fx-font-style: italic;
+  -fx-font-size: 13px;
+  -fx-padding: 24;
+}
+
+/* ======================================================
+   PELAPORAN PAGE
+   ====================================================== */
+
+.form-card {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 20px;
+  -fx-border-radius: 20px;
+  -fx-border-color: #d0e8d8;
+  -fx-effect: dropshadow(gaussian, #0000001a, 12, 0, 0, 4);
+}
+
+.foto-nama-label {
+  -fx-font-size: 13px;
+  -fx-text-fill: #9ab8a6;
+  -fx-font-style: italic;
+}
+
+.foto-selected {
+  -fx-text-fill: #15803d;
+  -fx-font-style: normal;
+  -fx-font-weight: 600;
+}
+
+.info-box {
+  -fx-background-color: #ecfdf5;
+  -fx-background-radius: 12px;
+  -fx-border-radius: 12px;
+  -fx-border-color: #6ee7a0;
+}
+
+.info-text {
+  -fx-font-size: 13px;
+  -fx-text-fill: #065f46;
+  -fx-wrap-text: true;
+}
+
+/* ======================================================
+   HISTORY & ADMIN — Tables
+   ====================================================== */
+
+.laporan-table {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #d0e8d8;
+  -fx-border-radius: 14px;
+  -fx-background-radius: 14px;
+  -fx-effect: dropshadow(gaussian, #0000000f, 8, 0, 0, 2);
+}
+
+.laporan-table .column-header-background {
+  -fx-background-color: linear-gradient(to right, #b8f0c8, #d6f5de);
+  -fx-background-radius: 14 14 0 0;
+}
+
+.laporan-table .column-header .label {
+  -fx-text-fill: #1a4a2a;
+  -fx-font-weight: 800;
+  -fx-font-size: 12px;
+  -fx-padding: 10 8 10 8;
+}
+
+.laporan-table .table-row-cell {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #eef4f0;
+  -fx-border-width: 0 0 1 0;
+  -fx-padding: 2 0 2 0;
+}
+
+.laporan-table .table-row-cell:odd {
+  -fx-background-color: #fafcfb;
+}
+
+.laporan-table .table-row-cell:selected {
+  -fx-background-color: #d0f0da;
+}
+
+.laporan-table .table-row-cell:hover {
+  -fx-background-color: #eaf5ee;
+  -fx-cursor: hand;
+}
+
+.laporan-table .table-cell {
+  -fx-padding: 9 10 9 10;
+  -fx-font-size: 13px;
+  -fx-text-fill: #2e4a38;
+}
+
+/* Status badge cells */
+.status-pending {
+  -fx-text-fill: #b45309;
+  -fx-font-weight: 700;
+}
+.status-diproses {
+  -fx-text-fill: #1d4ed8;
+  -fx-font-weight: 700;
+}
+.status-selesai {
+  -fx-text-fill: #15803d;
+  -fx-font-weight: 700;
+}
+.status-ditolak {
+  -fx-text-fill: #b91c1c;
+  -fx-font-weight: 700;
+}
+
+/* ── Action Panel ─────────────────────────────────────── */
+.action-panel {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 18px;
+  -fx-border-radius: 18px;
+  -fx-border-color: #d0e8d8;
+  -fx-effect: dropshadow(gaussian, #0000001a, 10, 0, 0, 3);
+}
+
+.detail-key {
+  -fx-font-size: 11.5px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #7a9e87;
+}
+
+.detail-value {
+  -fx-font-size: 13px;
+  -fx-text-fill: #172b1f;
+  -fx-wrap-text: true;
+  -fx-font-weight: 500;
+}
+
+.detail-area {
+  -fx-background-color: #f5faf6;
+  -fx-border-color: #d0e8d8;
+  -fx-border-radius: 9px;
+  -fx-background-radius: 9px;
+  -fx-font-size: 13px;
+  -fx-text-fill: #2e4a38;
+}
+
+/* ── Danger Button variant ────────────────────────────── */
+.btn-danger {
+  -fx-background-color: linear-gradient(to bottom, #f87171, #ef4444);
+  -fx-text-fill: #ffffff;
+  -fx-font-weight: 700;
+  -fx-font-size: 13px;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10 18 10 18;
+  -fx-cursor: hand;
+  -fx-effect: dropshadow(gaussian, #ef444450, 6, 0, 0, 2);
+}
+
+.btn-danger:hover {
+  -fx-background-color: linear-gradient(to bottom, #ef4444, #dc2626);
+  -fx-effect: dropshadow(gaussian, #ef444470, 10, 0, 0, 3);
+}
+
+.btn-danger:pressed {
+  -fx-background-color: #b91c1c;
+}
+
+/* ── Warning/Tolak Button ─────────────────────────────── */
+.btn-tolak {
+  -fx-background-color: #ffffff;
+  -fx-text-fill: #dc2626;
+  -fx-font-weight: 700;
+  -fx-font-size: 13px;
+  -fx-border-color: #fca5a5;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10 18 10 18;
+  -fx-cursor: hand;
+}
+
+.btn-tolak:hover {
+  -fx-background-color: #fef2f2;
+  -fx-border-color: #ef4444;
+}
+
+/* ── Status chips (HistoryView) ───────────────────────── */
+.chip {
+  -fx-font-size: 12px;
+  -fx-font-weight: 700;
+  -fx-background-radius: 20px;
+  -fx-padding: 5 14 5 14;
+  -fx-cursor: default;
+}
+
+/* ======================================================
+   BANK SAMPAH — Map page extras
+   ====================================================== */
+
+.map-hint-label {
+  -fx-font-size: 12px;
+  -fx-text-fill: #7a9e87;
+  -fx-background-color: #f0fdf4;
+  -fx-border-color: #bbf7d0;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-padding: 5 12 5 12;
+}
+
+.coord-label {
+  -fx-font-size: 12.5px;
+  -fx-font-weight: 700;
+  -fx-text-fill: #2e7d50;
+  -fx-background-color: #ecfdf5;
+  -fx-border-color: #6ee7a0;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-padding: 5 12 5 12;
+}
+
+.riwayat-cell-nama {
+  -fx-font-weight: 700;
+  -fx-font-size: 13px;
+  -fx-text-fill: #172b1f;
+}
+
+.badge-menunggu {
+  -fx-text-fill: #b45309;
+}
+.badge-disetujui {
+  -fx-text-fill: #15803d;
+}
+.badge-ditolak {
+  -fx-text-fill: #b91c1c;
+}
+
+/* ======================================================
+   SEPARATORS
+   ====================================================== */
+
+.separator > .line {
+  -fx-border-color: transparent transparent #e8f0ec transparent;
+  -fx-border-style: solid;
+}
+
+/* ======================================================
+   SCROLLBAR — Thin, modern
+   ====================================================== */
+
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+  -fx-background-color: transparent;
+  -fx-pref-width: 6px;
+  -fx-pref-height: 6px;
+}
+
+.scroll-bar .thumb {
+  -fx-background-color: #b8dcc4;
+  -fx-background-radius: 4px;
+}
+
+.scroll-bar .thumb:hover {
+  -fx-background-color: #6ed48a;
+}
+
+.scroll-bar .track {
+  -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+  -fx-background-color: transparent;
+  -fx-pref-width: 0;
+  -fx-pref-height: 0;
+}
+
+/* ======================================================
+   DIALOG / ALERT — custom theming
+   ====================================================== */
+
+.dialog-pane {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 16px;
+  -fx-border-radius: 16px;
+  -fx-border-color: #d0e8d8;
+  -fx-effect: dropshadow(gaussian, #00000030, 20, 0, 0, 8);
+}
+
+.dialog-pane .header-panel {
+  -fx-background-color: #f0fdf4;
+  -fx-background-radius: 16 16 0 0;
+}
+
+.dialog-pane .content.label {
+  -fx-font-size: 14px;
+  -fx-text-fill: #172b1f;
+  -fx-padding: 10;
+}
+
+.dialog-pane .button-bar .button {
+  -fx-font-size: 13px;
+  -fx-font-weight: 600;
+  -fx-border-radius: 9px;
+  -fx-background-radius: 9px;
+  -fx-padding: 9 20 9 20;
+  -fx-cursor: hand;
+}
+
+/* ======================================================
+   TOOLTIP
+   ====================================================== */
+
+.tooltip {
+  -fx-background-color: #172b1f;
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 12px;
+  -fx-background-radius: 8px;
+  -fx-padding: 6 12 6 12;
+}
