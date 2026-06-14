@@ -111,7 +111,7 @@ mvn javafx:run
 
 ## 🎥 Video Presentasi
 
-> 📺 [Link YouTube — akan diupdate]
+> 📺 [https://youtu.be/EEGeTU1uvlI]
 
 ---
 
